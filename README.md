@@ -1,1 +1,3 @@
 # AutomatedTesting-SoapUI
+
+mvn install
