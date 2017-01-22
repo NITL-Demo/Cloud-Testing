@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+<name>Test soapui</name>
+<groupId>tdrury</groupId>
+<artifactId>com.example.soapuitests</artifactId>
+<version>1.0-SNAPSHOT</version>
+<packaging>jar</packaging>
+<description>blah blah</description>
+
+
+<repositories>
+    <repository>
+      <id>my-repo1</id>
+      <name>smartbear repo</name>
+      <url>http://smartbearsoftware.com/repository/maven2/</url>
+    </repository>
+    
+  </repositories>
+
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>com.smartbear.soapui</groupId>
+            <artifactId>soapui-maven-plugin</artifactId>
+            <version>5.2.1</version>
+             
+            <executions>
+				 <execution>
+						<id>Pizzas-soapui-project</id>
+						<configuration>
+							<projectFile>REST-Pizzas-soapui-project.xml</projectFile>
+							<outputFolder>target/surefire-reports</outputFolder>
+							 <testSuite>PizzasTestSuite</testSuite>
+
+							<junitReport>true</junitReport>
+							<exportwAll>true</exportwAll>
+							<printReport>true</printReport>
+							<testFailIgnore>true</testFailIgnore>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<phase>test</phase>
+					</execution>
+					<execution>
+						<id>Bases-soapui-project</id>
+						<configuration>
+							<projectFile>REST-Bases-soapui-project.xml</projectFile>
+							<outputFolder>target/surefire-reports</outputFolder>
+							 <testSuite>BasesTestSuite</testSuite>
+
+							<junitReport>true</junitReport>
+							<exportwAll>true</exportwAll>
+							<printReport>true</printReport>
+							<testFailIgnore>true</testFailIgnore>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<phase>test</phase>
+					</execution>
+					<execution>
+						<id>Orders-soapui-project</id>
+						<configuration>
+							<projectFile>REST-Orders-soapui-project.xml</projectFile>
+							<outputFolder>target/surefire-reports</outputFolder>
+							 <testSuite>OrdersTestSuite</testSuite>
+
+							<junitReport>true</junitReport>
+							<exportwAll>true</exportwAll>
+							<printReport>true</printReport>
+							<testFailIgnore>true</testFailIgnore>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<phase>test</phase>
+					</execution>
+					<execution>
+						<id>Toppings-soapui-project</id>
+						<configuration>
+							<projectFile>REST-Toppings-soapui-project.xml</projectFile>
+							<outputFolder>target/surefire-reports</outputFolder>
+							 <testSuite>ToppingsTestSuite</testSuite>
+
+							<junitReport>true</junitReport>
+							<exportwAll>true</exportwAll>
+							<printReport>true</printReport>
+							<testFailIgnore>true</testFailIgnore>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<phase>test</phase>
+					</execution>
+					<execution>
+						<id>PizzaOrders-soapui-project</id>
+						<configuration>
+							<projectFile>REST-PizzaOrders-soapui-project.xml</projectFile>
+							<outputFolder>target/surefire-reports</outputFolder>
+							 <testSuite>PizzaOrdersTestSuite</testSuite>
+
+							<junitReport>true</junitReport>
+							<exportwAll>true</exportwAll>
+							<printReport>true</printReport>
+							<testFailIgnore>true</testFailIgnore>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<phase>test</phase>
+					</execution>
+					
+				</executions>
+        </plugin>
+    </plugins>
+</build>
+</project>
