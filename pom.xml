@@ -10,7 +10,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 <packaging>jar</packaging>
 <description>Service Performance Testing</description>
 
-
+<!--
 <repositories>
     <repository>
       <id>my-repo1</id>
@@ -19,8 +19,17 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     </repository>
     
   </repositories>
-
-
+-->
+<dependencies>
+	<dependency>
+	  <groupId>com.jgoodies</groupId>
+	  <artifactId>jgoodies-forms</artifactId>
+	  <version>1.6.0</version>
+	</dependency>
+	
+</dependencies>
+	
+	
 <build>
     <plugins>
         <plugin>
