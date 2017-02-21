@@ -40,11 +40,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 <build>
     <plugins>
         <plugin>
-		<!--
+		
             <groupId>com.smartbear.soapui</groupId>
             <artifactId>soapui-maven-plugin</artifactId>
             <version>5.2.1</version>
-             -->
+             
             <executions>
 				 <execution>
 						<id>Pizzas-soapui-project</id>
