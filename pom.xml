@@ -114,7 +114,27 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 						</goals>
 						<phase>test</phase>
 					</execution>
-					
+		                        <execution>
+						<id>PizzaPerformance-soapui-project</id>
+						<configuration>
+							<projectFile>Pizzas-soapui-project.xml</projectFile>
+							<outputFolder>target/surefire-reports</outputFolder>
+							 <testSuite>PizzaOrder</testSuite>
+
+							<junitReport>true</junitReport>
+							<exportwAll>true</exportwAll>
+							<printReport>true</printReport>
+							<testFailIgnore>true</testFailIgnore>
+						</configuration>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<phase>test</phase>
+					</execution>			
+		    
+		    
+		    
+		    
 				</executions>
         </plugin>
     </plugins>
