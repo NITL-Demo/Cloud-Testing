@@ -8,7 +8,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 <artifactId>com.example.soapuitests</artifactId>
 <version>1.0-SNAPSHOT</version>
 <packaging>jar</packaging>
-<description>Service Performance Testing</description>
+<description>blah blah</description>
 
 
 <repositories>
@@ -20,25 +20,26 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
     
   </repositories>
 
+  
 
-	
-	
 <build>
     <plugins>
         <plugin>
-		
             <groupId>com.smartbear.soapui</groupId>
             <artifactId>soapui-maven-plugin</artifactId>
             <version>5.2.1</version>
-		
-	    <dependencies>
-			<dependency>
-			  <groupId>com.jgoodies</groupId>
-			  <artifactId>jgoodies-forms</artifactId>
-			  <version>1.6.0</version>
-			</dependency>
-	    </dependencies>	
              
+			  <dependencies>
+				   <dependency>
+							  <groupId>com.jgoodies</groupId>
+							  <artifactId>jgoodies-forms</artifactId>
+							  <version>1.6.0</version>
+							 
+					</dependency>
+			   </dependencies>
+			 
+			 
+			 
             <executions>
 				 <execution>
 						<id>Pizzas-soapui-project</id>
@@ -125,7 +126,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 						</goals>
 						<phase>test</phase>
 					</execution>
-		                        <execution>
+					
+					 <execution>
 						<id>PizzaPerformance-soapui-project</id>
 						<configuration>
 							<projectFile>Pizzas-soapui-project.xml</projectFile>
@@ -141,11 +143,33 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 							<goal>test</goal>
 						</goals>
 						<phase>test</phase>
-					</execution>			
-		    
-		    
-		    
-		    
+					</execution>		
+					
+					
+					 <execution>
+						<id>PizzaLoadTest-soapui-project</id>
+						<configuration>
+							<projectFile>Pizzas-soapui-project.xml</projectFile>
+							 <loadTest>PizzaOrderLoadTest</loadTest>
+							<outputFolder>target/surefire-reports</outputFolder>
+							<!-- <testSuite>PizzaOrder</testSuite> -->
+                            <reportFormat>PDF</reportFormat>
+							<junitReport>true</junitReport>
+							<exportwAll>true</exportwAll>
+							<printReport>true</printReport>
+							<testFailIgnore>true</testFailIgnore>
+						</configuration>
+						<goals>
+							<goal>loadtest</goal>
+						</goals>
+						<phase>test</phase>
+					</execution>		
+
+                        
+					
+					
+					
+					
 				</executions>
         </plugin>
     </plugins>
