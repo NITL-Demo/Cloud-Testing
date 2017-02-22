@@ -153,7 +153,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 							 <loadTest>PizzaOrderLoadTest</loadTest>
 							<outputFolder>target/surefire-reports</outputFolder>
 							<!-- <testSuite>PizzaOrder</testSuite> -->
-                            <reportFormat>PDF</reportFormat>
+                                                        <reportFormat>HTML</reportFormat>
 							<junitReport>true</junitReport>
 							<exportwAll>true</exportwAll>
 							<printReport>true</printReport>
@@ -165,24 +165,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 						<phase>test</phase>
 					</execution>		
 
-		                          <execution>
-						<id>PizzaLoadTest-soapui-project</id>
-						<configuration>
-							<projectFile>Pizzas-soapui-project.xml</projectFile>
-							 <loadTest>PizzaOrderLoadTest</loadTest>
-							<outputFolder>target/surefire-reports</outputFolder>
-							<!-- <testSuite>PizzaOrder</testSuite> -->
-                                                         <reportFormat>HTML</reportFormat>
-							<junitReport>true</junitReport>
-							<exportwAll>true</exportwAll>
-							<printReport>true</printReport>
-							<testFailIgnore>true</testFailIgnore>
-						</configuration>
-						<goals>
-							<goal>loadtest</goal>
-						</goals>
-						<phase>test</phase>
-					</execution>		
+		                       	
                         
 					
 					
