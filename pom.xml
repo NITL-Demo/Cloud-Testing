@@ -41,74 +41,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 			 
 			 
             <executions>
-				 <execution>
-						<id>Pizzas-soapui-project</id>
-						<configuration>
-							<projectFile>REST-Pizzas-soapui-project.xml</projectFile>
-							<outputFolder>target/surefire-reports</outputFolder>
-							 <testSuite>PizzasTestSuite</testSuite>
-
-							<junitReport>true</junitReport>
-							<exportwAll>true</exportwAll>
-							<printReport>true</printReport>
-							<testFailIgnore>true</testFailIgnore>
-						</configuration>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<phase>test</phase>
-					</execution>
-					<execution>
-						<id>Bases-soapui-project</id>
-						<configuration>
-							<projectFile>REST-Bases-soapui-project.xml</projectFile>
-							<outputFolder>target/surefire-reports</outputFolder>
-							 <testSuite>BasesTestSuite</testSuite>
-
-							<junitReport>true</junitReport>
-							<exportwAll>true</exportwAll>
-							<printReport>true</printReport>
-							<testFailIgnore>true</testFailIgnore>
-						</configuration>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<phase>test</phase>
-					</execution>
-					<execution>
-						<id>Orders-soapui-project</id>
-						<configuration>
-							<projectFile>REST-Orders-soapui-project.xml</projectFile>
-							<outputFolder>target/surefire-reports</outputFolder>
-							 <testSuite>OrdersTestSuite</testSuite>
-
-							<junitReport>true</junitReport>
-							<exportwAll>true</exportwAll>
-							<printReport>true</printReport>
-							<testFailIgnore>true</testFailIgnore>
-						</configuration>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<phase>test</phase>
-					</execution>
-					<execution>
-						<id>Toppings-soapui-project</id>
-						<configuration>
-							<projectFile>REST-Toppings-soapui-project.xml</projectFile>
-							<outputFolder>target/surefire-reports</outputFolder>
-							 <testSuite>ToppingsTestSuite</testSuite>
-
-							<junitReport>true</junitReport>
-							<exportwAll>true</exportwAll>
-							<printReport>true</printReport>
-							<testFailIgnore>true</testFailIgnore>
-						</configuration>
-						<goals>
-							<goal>test</goal>
-						</goals>
-						<phase>test</phase>
-					</execution>
+				
 					<execution>
 						<id>PizzaOrders-soapui-project</id>
 						<configuration>
